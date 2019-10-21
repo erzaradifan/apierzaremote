@@ -12,4 +12,4 @@ var routes = require('./routes');
 routes(app);
 
 app.listen(port);
-console.log('Learn Node JS With Kiddy Erza Radifan Ramat, RESTful API server started on: ' + port);
+console.log('Learn Node JS With Kiddy Erza Radifan Ramat, RESTful API server started on: ' + port +'adssad');
