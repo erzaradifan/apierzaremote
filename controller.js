@@ -35,7 +35,8 @@ exports.findUsers = function(req, res) {
     });
 };
 
-exports.createUsers = verifyToken, function (req, res) {
+exports.createUsers  =  function( req, res) {
+    verifyToken(req,res)
     console.log('masuk ga ya 1')
     jwt.verify(req.token, 'secretkey', (err, authData) => {
         if(err){
@@ -51,6 +52,7 @@ exports.createUsers = verifyToken, function (req, res) {
                     console.log(error)
                 } else{
                     response.ok("Berhasil menambahkan user!", res)
+                    authData;
                 }
             });  
         }
@@ -63,7 +65,8 @@ exports.createUsersjwt = function (req, res) {
         username:'brad',
         email:'brad@gmail.com'
     }
-    jwt.sign({user:user}, 'secretkey', (err,token)=> {
+    jwt.sign({user:user}, 'secretkey', (
+        err,token)=> {
         res.json({
             token:token
         }); 
@@ -115,8 +118,8 @@ exports.deleteUsers = function(req, res) {
     });
 };
 
-function verifyToken(req, res, next){
-    console.log('masuk sini')
+function verifyToken(req, res, next) {
+    console.log('masuk sini');
     //get auth header value
     const bearerHeader = req.headers['authorization'];
     //check if bearer is undefined
@@ -125,7 +128,7 @@ function verifyToken(req, res, next){
         const bearerToken = bearer[1];
         console.log('bearer : ' + bearerToken)
         req.token = bearerToken;
-        next();  
+        next;  
     }else{
         //forbidden 
         res.sendStatus(403)
