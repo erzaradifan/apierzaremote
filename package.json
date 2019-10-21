@@ -1,0 +1,28 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api exp erza",
+  "main": "index.js",
+  "scripts": {
+    "test": "testapi",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "api",
+    "erza",
+    "dev",
+    "test"
+  ],
+  "author": "erza",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "apierza"
+  }
+}
