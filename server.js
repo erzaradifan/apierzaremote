@@ -9,10 +9,8 @@ const port = 3000
 const bodyParser = require('body-parser')
 const controller = require('./controller')
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 var routes = require('./routes');
 routes(app);
